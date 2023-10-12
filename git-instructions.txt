@@ -1,0 +1,4 @@
+git commit --amend
+git reset HEAD~1
+git push origin +main
+git rebase -i HEAD~4
