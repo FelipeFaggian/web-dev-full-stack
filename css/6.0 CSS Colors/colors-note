@@ -1,0 +1,10 @@
+/* 
+background-color
+https://developer.mozilla.org/en-US/docs/Web/CSS/named-color
+https://www.csfieldguide.org.nz/en/interactives/rgb-mixer/
+colorhunt.co
+hex codes
+rgb 
+tag {
+  propertie: #hexcode;
+}
