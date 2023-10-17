@@ -1,0 +1,23 @@
+https://developer.mozilla.org/en-US/docs/Web/HTML/Element/li
+
+targeting
+
+tag{
+css;
+}
+
+.class-name {
+css;
+}
+
+#id{
+css;
+}
+
+element[attribute]{
+css;
+}
+
+\*{
+css;
+}
