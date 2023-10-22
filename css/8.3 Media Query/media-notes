@@ -1,0 +1,10 @@
+https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries
+
+breakpoint
+max
+min
+combine -> @media (width) and (width) {
+css
+}
+
+screen(print)
