@@ -1,0 +1,9 @@
+flexbox/gird(1D/2D)
+
+appbrewery.github.io/grid-vs-flexbox/
+
+tag {
+display: grid;
+grid-template-columns: (fr)
+grid-template-rows: (fr)
+}

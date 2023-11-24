@@ -1,0 +1,13 @@
+https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/Universal_selectors
+
+flex-direction: row;
+main-axis(horizontal)
+cross-axis(vertical)
+
+flex-direction: column;
+main-axis(vertical)
+cross-axis(horizontal)
+
+flex-basis (expand main-axis)
