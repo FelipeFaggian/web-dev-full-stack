@@ -1,0 +1,7 @@
+<!--
+hierarchy (position, specifity, type, importance)
+position(gravity)
+specifity(element -> class -> attibute -> id)
+type(external -> internal -> inline)
+importance (!important
+)

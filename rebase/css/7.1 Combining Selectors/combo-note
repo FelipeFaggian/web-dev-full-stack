@@ -1,0 +1,10 @@
+/*
+selector selector{
+  css;
+}
+
+group( , )
+child( > )
+descendant(  )
+chaining()
+combo(descendant chaining)

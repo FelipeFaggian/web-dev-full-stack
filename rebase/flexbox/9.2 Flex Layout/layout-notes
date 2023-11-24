@@ -1,0 +1,42 @@
+/* https: //css-tricks.com/snippets/css/a-guide-to-flexbox/;
+
+
+tag {
+  order: (value)
+}
+
+.container {
+  flex-wrap: wrap;
+}
+
+.container {
+  justify-content: flex-start;
+}
+
+.container {
+  justify-content: flex-end;
+}
+
+.container {
+  justify-content: center;
+}
+
+
+.container {
+  justify-content: space-between;
+}
+
+height: (value)vh -> view-port
+
+.container {
+  aling-items: flex-start;
+}
+
+
+.container {
+  aling-items: flex-end; 
+}
+
+.item {
+  align-self: (value);
+}

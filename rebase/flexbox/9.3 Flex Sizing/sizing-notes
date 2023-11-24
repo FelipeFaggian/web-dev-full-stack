@@ -1,0 +1,11 @@
+content<width<basis<max/min
+
+content -> word
+width -> box
+basis -> main-axis -> initial
+max/min -> grow/shrink
+
+flex: (grow) (shrink) (basis);
+
+flex: (value);
+

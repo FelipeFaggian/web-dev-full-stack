@@ -1,0 +1,5 @@
+location
+absolute = C:/folder/file = /folder/file
+relative = folder/file
+../file = up
+./file = current
