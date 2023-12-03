@@ -1,0 +1,44 @@
+index.html
+
+shape-1-hero ->
+(background)
+<h1>Do worry. You finally found me.</h1>
+
+shapw-2-hero ->
+(profile-photo)
+<h2>My name is Felipe Faggian.</h2>
+<p>I am the creator of LiCODEn. A LinkedIn version made from scratch by me. So, yes. I can take care of your requests. Count with me.</p>
+ 
+shape-3-feature ->
+(white-row)
+[feature-1]
+<h3>Why LinCODEn?</h3>
+<p>LinkedIn is the biggest platform for professional connections in the world. If I can program something like this, what can't I program? Games? Maybe...</p>
+[feature-2]
+<h3>Want to see me working?</h3>
+<p>Easy. My programming videos are posted on LinkedIn itself. See you there!</p>
+[feature-3]
+<h3>Is it just LinCODEn?</h3>
+<p>Nop. This project only illustrates my understanding of the technologies shown below.</p>
+
+shape-4-hero->
+<h3>Full Stack</h3>
+</br>
+<h4>Front-end</h4>
+<p>HTML - CSS - JS (React - Node.js)</p>
+[section-2]
+<h4>Back-end</h4>
+<p>PostgreSQL - Web3 - DApps</p>
+</br>
+<p>Yup. Basically, a joker.</p>
+
+shape-5-hero->
+<h3>About me?</h3>
+<p>Well, programming is my passion, and family is my duty. That is all.</p>
+
+shape-6-section->
+<h3>Get interested? My work can be yours.</h3>
+
+	<button>
+        	<a href="mailto:faggian.job@gmail.com">Let's talk about business!</a>
+    	</button>
