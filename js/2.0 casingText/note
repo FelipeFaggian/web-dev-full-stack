@@ -1,0 +1,14 @@
+<!--
+
+variable.toUpperCase();
+variable.toLowerCase();
+
+// Hello, Felipe!
+var name = prompt("Excuse-me. What is your name?");
+var firstLetter = name.slice(0,1);
+var countName = name.length;
+var otherLetters = name.slice(1, countName);
+var organizedName = firstLetter.toUpperCase() + otherLetters.toLowerCase();
+alert("Hello, " + organizedName + "!");
+    
+-->
