@@ -1,0 +1,9 @@
+<!--
+
+//You have written 142 characters, you have -42 characters left.
+var message = prompt("Enter the message.")
+var charactersWritten = message.length;
+var charactersRemaining = 140 - charactersWritten;
+alert("You have written " + charactersWritten + " characters, you have " + charactersRemaining + " characters left.");
+
+-->
