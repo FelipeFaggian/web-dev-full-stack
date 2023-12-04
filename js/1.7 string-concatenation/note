@@ -1,0 +1,11 @@
+<!--
+
+var message = "Hello";
+var name = "Felipe";
+
+// Write the code below:
+
+alert(message + ", " + name);
+
+
+-->
