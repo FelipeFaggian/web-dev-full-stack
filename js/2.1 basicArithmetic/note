@@ -1,0 +1,8 @@
+<!-- 
+exercise:
+// dogAgeConverter = (dogAge - 2) * 4 + 21;
+var dogAge = prompt("What is the age of your dog?");
+var dogAgeConverted = (dogAge - 2) * 4 + 21;
+alert("If your dog were a human, it would be " + dogAgeConverted + " years old.");
+
+-->
