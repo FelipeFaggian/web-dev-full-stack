@@ -1,0 +1,14 @@
+<!-- 
+
+var++
+var--
+var+=otherVar(var=var+otherVar)
+var-=otherVar
+(/,*,%...)
+
+var x = 3;
+x++;
+var y = x++;
+y += 1;
+
+-->
