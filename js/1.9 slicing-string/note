@@ -1,0 +1,8 @@
+<!--
+
+myVar.slice(x,y);
+
+var tweet = prompt("Enter your message.");
+var tweetSlice = tweet.slice(0, 140);
+alert("Your tweet is: '" + tweetSlice + "' - Your message have " + tweetSlice.length + " characters.");
+-->
