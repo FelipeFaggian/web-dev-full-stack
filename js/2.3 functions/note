@@ -1,0 +1,69 @@
+<!--
+
+function name {
+    console.log();
+    ...
+}
+
+https://stanford.edu/~cpiech/karel/ide.html
+
+
+/**
+ * Welcome to the Stanford Karel IDE.
+ * This is a free space for you to 
+ * write any Karel program you want.
+ **/
+function main(){   
+   repeat(5) {
+      nextStep();
+   }
+}
+
+function nextStep() {
+   putBeeper();
+   move();
+   turnLeft();
+   move();
+   turnRight();
+}
+-->
+
+chessChallenge
+
+function main(){
+     forward();
+     forward();
+     left();
+     forward();
+     right();
+     forward();
+     forward();
+     left();
+     forward();
+     right();
+     forward();
+     forward();
+     putBeeper();
+}
+
+function forward() {
+      putBeeper();
+      move();
+      move();
+}
+   
+function left() {
+   putBeeper();
+   repeat(2) {
+   turnLeft();
+   move();
+   }
+}  
+
+function right() {
+   putBeeper();
+   repeat(2) {
+   move();
+   turnRight();
+   }
+}
