@@ -1,0 +1,10 @@
+<!-- 
+Math.random();
+-->
+
+//loveCalculatorExercise
+
+prompt("Please enter your name.")
+prompt("Now, enter the name of your beloved person. Let's see the chances!")
+var scoreLove = Math.round((Math.random() * 100) + 1);
+alert("The score of love between you two is: " + scoreLove + "%!");
