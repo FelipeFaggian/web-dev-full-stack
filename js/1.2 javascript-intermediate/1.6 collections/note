@@ -1,0 +1,12 @@
+<!--
+var myList = [];
+myList.includes();
+-->
+//guestsPartyExercise
+var guest = prompt("Hello! What is your name?");
+var guestList = ["Felipe", "Eunir", "Regina", "Raissa", "Hugo"];
+if (guestList.includes(guest) === true) {
+  alert("Welcome!");
+} else {
+  alert("Sorry. Maybe next time.");
+}
