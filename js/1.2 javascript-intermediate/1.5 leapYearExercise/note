@@ -1,0 +1,17 @@
+<!--
+exercise:
+-->
+
+//leapYear
+var particularYear;
+function leapYear(particularYear) {
+  if(particularYear % 4 === 0 && particularYear % 400 === 0 || particularYear % 4 === 0 && particularYear % 100 !== 0) {
+    var response = "Leap year.";
+  }
+  else {
+    var response = "Not leap year.";
+  }
+  return response;
+}
+
+console.log(leapYear(2400));
