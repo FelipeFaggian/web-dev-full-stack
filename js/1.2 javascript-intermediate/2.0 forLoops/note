@@ -1,0 +1,34 @@
+/*
+while(condition)
+for(duration)
+exercise:
+
+function fibonacciGenerator(n) {
+//Do NOT change any of the code above 👆
+    
+    //Write your code here:
+    var sequenceNumbers = [0,1];
+    var nextNumber;
+    if (n===0) {
+        sequenceNumbers.pop();
+        sequenceNumbers.pop();
+    } else if (n===1) {
+        sequenceNumbers.pop();    
+    } else if (n===2) {
+        
+    } else {
+        for (var i=0; i < (n-2); i++) {
+            nextNumber = sequenceNumbers[i] + sequenceNumbers[i + 1];
+            sequenceNumbers.push(nextNumber);
+        }
+    }
+    return sequenceNumbers;
+    
+    
+    //Return an array of fibonacci numbers starting from 0.
+    
+//Do NOT change any of the code below 👇
+}
+
+fibonacciGenerator(356);
+*/
