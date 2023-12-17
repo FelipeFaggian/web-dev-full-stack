@@ -1,0 +1,16 @@
+<!--houseKeeperExercise-->
+
+function HouseKeeper(yearsOfExperience, name, repertoryOfCleaning) {
+    this.yearsOfExperience = yearsOfExperience;
+    this.name = name;
+    this.repertoryOfCleaning = repertoryOfCleaning;
+    this.cleaningAction = function() {
+    return alert("Cleaning in progress!");
+    }
+}
+
+var houseKeeper1 = new HouseKeeper(12, "Jane", ["bedroom", "lobby", "bathroom"]);
+var houseKeeper2 = new HouseKeeper(10, "Sara", ["courtyard", "pool", "garage"]);
+var houseKeeper3 = new HouseKeeper(8, "Mary", ["hall", "kitchen", "any other place"]);
+
+houseKeeper1.cleaningAction();
