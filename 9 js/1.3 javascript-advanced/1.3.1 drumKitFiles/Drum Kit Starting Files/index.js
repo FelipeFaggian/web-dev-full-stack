@@ -1,17 +1,6 @@
-document.addEventListener("keydown", keyPress => {
-    var keyboard = keyPress.key;
-    return pressLogic(keyboard); 
-})
-
-for(var i=0; i<document.querySelectorAll(".drum").length; i++) {
-    document.querySelectorAll("button")[i].addEventListener("click", function() {
-        var mouse = this.innerHTML;
-        return pressLogic(mouse);
-    }
-)}
-
-function pressLogic(pressed) {
-    switch (pressed) {
+function pressLogic(value) {
+    animationButton(value);
+    switch (value) {
         case "w":
             var tom1 = new Audio("./sounds/tom-1.mp3");
             tom1.play();
@@ -44,3 +33,22 @@ function pressLogic(pressed) {
             break;
     }
 }
+
+function animationButton(currentlyKey) {
+        document.querySelector("." + currentlyKey).classList.add("pressed");
+        setTimeout(function() {
+        document.querySelector("." + currentlyKey).classList.remove("pressed");
+        } ,100);
+}
+
+document.addEventListener("keydown", keyPress => {
+    var keyboard = keyPress.key;
+    return pressLogic(keyboard); 
+})
+
+for(var i=0; i<document.querySelectorAll(".drum").length; i++) {
+    document.querySelectorAll("button")[i].addEventListener("click", function() {
+        mouse = this.innerHTML;
+        return pressLogic(mouse);
+    }
+)}
