@@ -1,4 +1,5 @@
-//manipulating text with jQuery
-$("h1").text("Bye.");
-//$("button").text("Don't Click Me!");
-$("button").html("<em>Hey</em>");
+//manipulating attributes with jQuery
+console.log($("a").attr("href"));
+$("a").attr("href", "https://yahoo.com");
+console.log($("h1").attr("class", "newClass bigTitle margin50"));
+console.log($("h1").attr("class"));
