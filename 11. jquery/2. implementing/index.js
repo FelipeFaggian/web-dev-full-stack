@@ -1,4 +1,4 @@
-//manipulating style with jQuery
-$("h1").addClass("bigTitle margin50");
-//$("h1").hasClass("bigTitle");
-//$("h1").removeClass("bigTitle margin50");
+//manipulating text with jQuery
+$("h1").text("Bye.");
+//$("button").text("Don't Click Me!");
+$("button").html("<em>Hey</em>");
