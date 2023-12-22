@@ -1,5 +1,13 @@
-//manipulating attributes with jQuery
-console.log($("a").attr("href"));
-$("a").attr("href", "https://yahoo.com");
-console.log($("h1").attr("class", "newClass bigTitle margin50"));
-console.log($("h1").attr("class"));
+/*for (var i=0; i<document.querySelectorAll("button").length; i++) {
+    document.querySelectorAll("button")[i].addEventListener("click", function() {
+    document.querySelector("h1").style.color = "purple";
+    })
+}*/
+
+/*$("button").click(function() {
+    $("h1").css("color", "purple");
+})*/
+
+$("body").keydown(function(keyPress) {
+    $("h1").text(keyPress.key);
+})
