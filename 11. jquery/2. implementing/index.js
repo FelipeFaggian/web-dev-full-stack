@@ -1,13 +1,5 @@
-/*for (var i=0; i<document.querySelectorAll("button").length; i++) {
-    document.querySelectorAll("button")[i].addEventListener("click", function() {
-    document.querySelector("h1").style.color = "purple";
-    })
-}*/
-
-/*$("button").click(function() {
-    $("h1").css("color", "purple");
-})*/
-
-$("body").keydown(function(keyPress) {
-    $("h1").text(keyPress.key);
-})
+$("h1").append("<button>New</button>");
+$("h1").prepend("<button>New</button>");
+$("h1").before("<button>New</button>");
+$("h1").after("<button>New</button>");
+$("button").remove();
