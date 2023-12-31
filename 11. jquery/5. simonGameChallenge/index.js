@@ -100,7 +100,24 @@ $("body").keydown(function(pressed){
             pressChar = String.fromCharCode(pressCode); 
             tap.push(pressChar);
             console.log(tap);
-            round();
+            if(
+                pressChar == "\x1B" || pressChar == "p" || pressChar == "q"
+                || pressChar == "r" || pressChar == "s" || pressChar == "t"
+                || pressChar == "u" || pressChar == "v" || pressChar == "w"
+                || pressChar == "x" || pressChar == "y" || pressChar == "z"
+                || pressChar == "{" || pressChar == "\t" || pressChar == "\x12"
+                || pressChar == "\x91" || pressChar == "\x13" || pressChar == "\x11"
+                || pressChar == "\x10" || pressChar == "\x14" || pressChar == "À"
+                || pressChar == "\x90" || pressChar == "%" || pressChar == "&"
+                || pressChar == "(" || pressChar == "'" || pressChar == "-"
+                || pressChar == "$" || pressChar == "!" || pressChar == '"'
+                || pressChar == '#' || pressChar == '.' || pressChar == '\b'
+            ) {
+                empty();
+            }
+            else {
+                round();
+            }
         }
         else {   
         }
