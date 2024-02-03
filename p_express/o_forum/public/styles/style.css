@@ -1,0 +1,28 @@
+#copyright {
+    font-size: 10px;
+    margin-left: -5px;
+}
+
+p {
+    padding-top: 100px;
+}
+
+#nothing {
+    color: gray;
+    padding-top: 100px;
+    text-align: center; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-100 {
+    font-size: 100px;
+    color: gray;
+}
+
+.disable {
+    pointer-events: none;
+    color: gray;
+    border: 1px solid gray;
+}

@@ -1,0 +1,14 @@
+<%- include('partials/header.ejs') %>
+
+<p>
+    <% if( locals.postsSequence[0] !== undefined) { %>
+        <%- include('partials/bodyPost.ejs') %>
+    <% } else { %>
+    
+        <h1 id="nothing" class="col-12">There aren't any posts published. Be the first!</h1>
+            <i class="bi bi-emoji-laughing d-flex icon-100 justify-content-center py-5 pe-5" ></i>
+        
+    <% } %>
+</p>
+
+<%- include('partials/footer.ejs') %>

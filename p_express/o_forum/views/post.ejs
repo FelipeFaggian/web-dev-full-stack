@@ -1,0 +1,11 @@
+<%- include('partials/header.ejs')  %>
+
+<p>
+    <form action="/newPost" method="POST" class="d-flex flex-column col-8 justify-content-center mx-auto">
+        <input type="text" placeholder="   What is the title?" name="title" value="" class="py-3 border-black mb-3"> 
+        <input type="text" placeholder="   What is your message?" name="message" value="" class="py-5 border-black mb-3">
+        <button type="submit" class="btn btn-dark btn-lg">Send</button>
+    </form>
+</p>
+
+<%- include('partials/footer.ejs') %>
