@@ -1,0 +1,70 @@
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
+
+    <title>Register</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/floating-labels/">
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="floating-labels.css" rel="stylesheet">
+
+     <!-- Top Config -->
+     <%- include('partials/config/headConfig.ejs') %>
+  </head>
+
+  <body>
+    <div class="">  
+      <form class="form-signin d-flex justify-content-around pt-3" action="/signIn" method="POST">
+        <a href="/"><button type="button" class="btn btn-lg btn-dark">Home</button></a>
+        <!-- User Icon-->
+        <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor" class="bi bi-person-circle ms-3" viewBox="0 0 16 16">
+            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+            <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+        </svg>
+        <a href="/Login"><button type="button" class="btn btn-lg btn-dark">Login</button></a>
+      </div>
+        
+      <div class="text-center">
+        <h1 class="h3 font-weight-normal">Client's Register</h1>
+        <p>Please, fill the camps below to be registered.</p>
+      </div>
+
+      <div class="form-label-group col-6 mx-auto py-1">
+        <label for="inputEmail" class="pt-2 text-danger"> <%= checkEmail %> </label>
+        <input name="signEmail" id="inputEmail" class="form-control" placeholder="What is your e-mail?" required="" autofocus="">
+        <label for="inputEmail" class="pt-2">Email address</label>
+      </div>
+
+      <div class="form-label-group col-6 mx-auto py-1">
+        <input name="signName" id="inputName" class="form-control" placeholder="What is your name?" required="" autofocus="">
+        <label for="inputEmail" class="pt-2">Name</label>
+      </div>
+
+      <div class="form-label-group col-6 mx-auto py-1">
+        <label for="inputPassword" class="pt-2 text-danger"> <%= checkPassword %> </label>
+        <input name="signPassword" id="inputPassword" class="form-control" placeholder="Create a password." required="">
+        <label for="inputPassword" class="pt-2">Password</label>
+      </div>
+
+      <div class="form-label-group col-6 mx-auto py-1">
+        <input name="confirmPassword" id="inputPassword" class="form-control" placeholder="Repeat the password." required="">
+        <label for="inputPassword" class="pt-2">Confirm Password</label>
+      </div>
+
+      <div class="text-center">
+        <button class="btn btn-lg btn-dark" type="submit">Sign in</button>
+        <p class="mt-3 text-muted">© 2017-2018</p>
+      </div>
+    </form>
+
+    <!--Bottom Config -->
+    <%- include('partials/config/endBodyConfig.ejs')%>
+
+</body></html>

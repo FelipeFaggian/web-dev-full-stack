@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <!-- Top Config -->
+        <%- include('partials/config/headConfig.ejs') %>
+    </head>
+
+    <body>
+       <!-- Top Body-->
+       <% if ( successLogin === true ) { %>
+        <%- include('partials/headerLogin.ejs') %>
+       <% } else { %>
+        <%- include('partials/header.ejs') %>
+       <% } %>
+        
+        <!-- Center Body-->
+        <%- include('main.ejs') %>
+
+        <!-- Bottom Body-->
+        <%- include('partials/footer.ejs') %>
+
+        <!--Bottom Config -->
+        <%- include('partials/config/endBodyConfig.ejs')%>
+    </body>
+
+</html>
