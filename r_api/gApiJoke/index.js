@@ -17,18 +17,23 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.get('/random', async function(req, res) {
   try {
       var i = Math.floor(Math.random() * jokes.length);
-      var getJokes = (jokes[i]);
+      let getJokes = (jokes[i]);
   } catch (error) {
       console.log(error.message);
   }
-  res.json(getJokes);
+  if (getJoke !== undefined || getJoke !== null || getJoke !== "") {
+    res.json(getJokes);
+  } else {
+    res.send("Ooops... This jokes's ID doesn't exists. Sorry!");
+  }
+  
 });
 
 //get specific joke OK
 app.get('/jokes/:id', function(req, res){
   // res.send('The id you specified is ' + req.params.id);
   let getJoke = jokes[req.params.id - 1];
-  if (getJoke !== undefined) {
+  if (getJoke !== undefined || getJoke !== null || getJoke !== "") {
     res.json(getJoke);
   } else {
     res.send("Ooops... This jokes's ID doesn't exists. Sorry!");

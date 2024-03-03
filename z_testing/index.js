@@ -1,18 +1,15 @@
 import express from "express";
-import bodyParser from "body-parser";
-import path from "path";
-import { fileURLToPath } from "url";
+import morgan from "morgan";
+ 
+var app = express()
 
-const app = express();
-const port = 8080;
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+const port = 4242;
 
-app.use(express.static(path.join(__dirname, 'views/public/images')));
-
-app.get('/', function(req, res) {
-    res.render("index.html");
-});
+app.use(morgan('combined'))
+ 
+app.get('/', function (req, res) {
+  res.send('hello, world!')
+})
 
 app.listen(port, function(err){
     if(err) {
