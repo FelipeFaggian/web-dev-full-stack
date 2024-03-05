@@ -7,6 +7,12 @@ const port = 4242;
 
 app.use(morgan('combined'))
  
+const db = {
+    username: "postgre",
+    password: "${{ secrets.MY_SECRET_TOKEN }}"
+}
+
+
 app.get('/', function (req, res) {
   res.send('hello, world!')
 })
