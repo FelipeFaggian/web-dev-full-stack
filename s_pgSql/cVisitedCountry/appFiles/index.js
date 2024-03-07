@@ -78,7 +78,6 @@ app.post("/add", async (req, res) => {
           countryInvalid = true;
           console.log("The country typed is invalid!");
         } else {
-
         };
         console.log("The value of completeClean on For verify is: ", completeClean);
         for(var i = 0; i<visitedCountries.length; i++) {         
