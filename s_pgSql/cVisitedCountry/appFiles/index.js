@@ -4,8 +4,11 @@ import utf8 from 'utf8';
 
 const app = express();
 const port = 3000;
+
 var visitedCountries = [];
+
 let completeClean;
+let error = undefined;
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
@@ -44,7 +47,8 @@ app.get("/", async (req, res) => {
       // console.log("We clean all the visitedCountries[i]? => ", visitedCountries[i]);
     };
     console.log("The array visitedCountries sended to index.ejs is: ", visitedCountries);
-    res.render("index.ejs", { countries: visitedCountries, total: visitedCountries.length });
+    res.render("index.ejs", { countries: visitedCountries, total: visitedCountries.length,
+    error: error });
   });
 });
 
@@ -58,24 +62,21 @@ app.post("/add", async (req, res) => {
       const result = results.rows;
       var stringResult = JSON.stringify(result);
       var cleanedResult = stringResult.replace('[{"code":"', "");
-      completeClean = cleanedResult.replace('"}]','');
-      
+      completeClean = cleanedResult.replace('"}]',''); 
       console.log("The value of completeClean is: ", completeClean);
-      // visitedCountries.push(completeClean);
-      // console.log("The array of visited countries on post block is: ", 
-      // Object.values(visitedCountries));
-      // let visitVerify = result;
-      // console.log("The value of visitVerify is: ", visitVerify);
+
       Client.query(`SELECT * FROM visited_country;`)
       .then(results => {
         const result = results.rows;
         visitedCountries = result;
         let countryRegistered = false;
         let countryInvalid = false;
+        error = undefined;
         console.log("The visitedCountry's value on post's block is: ", visitedCountries);
         console.log("Starting For loop for verify country typed....");
         if (completeClean == '[]' || completeClean == null || completeClean == undefined) {
           countryInvalid = true;
+          error = "The country typed is invalid! Please, type again.";
           console.log("The country typed is invalid!");
         } else {
         };
@@ -85,6 +86,7 @@ app.post("/add", async (req, res) => {
           visitedCountries[i].code_country);
           if(visitedCountries[i].code_country.includes(completeClean)) {
             countryRegistered = true;
+            error = "The country typed was already visited! Please, type again."
             console.log("The country typed was already registered!");
             i = visitedCountries.length + 1;
           } else {
