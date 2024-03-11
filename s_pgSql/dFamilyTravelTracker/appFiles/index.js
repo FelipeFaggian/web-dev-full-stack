@@ -50,13 +50,25 @@ async function checkUser() {
 app.get("/", async (req, res) => {
   const countries = await checkVisited();
   const users = await checkUser();
-  res.render("index.ejs", {
-    countries: countries,
-    total: countries.length,
-    users: users,
-    color: "teal",
-    error: error
-  });
+  let positionId = undefined;
+  console.log("The currentUserId on GETblock is: ", currentUserId);
+  console.log("The users's value on GETblock is: ", users);
+  for(var i=0; i<users.length; i++) {
+    if(users[i].id == currentUserId) {
+      console.log("Users's position on array finded on GETblock!");
+      positionId = users[i];
+       // console.log("The value of position Id is: ", positionId);
+      res.render("index.ejs", {
+        countries: countries,
+        total: countries.length,
+        users: users,
+        color: positionId.color,
+        error: error
+      });
+    } else {
+
+    }
+  };
 });
 app.post("/add", async (req, res) => {
   const input = req.body["country"];
@@ -118,7 +130,7 @@ app.post("/user", async (req, res) => {
     res.render('new.ejs');
   } else {
     currentUserId = req.body.user;
-    console.log("The currentUserId is: ", currentUserId);
+    console.log("The currentUserId on POSTblock is: ", currentUserId);
     res.redirect('/');
   }
 });
