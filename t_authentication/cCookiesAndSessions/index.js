@@ -36,6 +36,7 @@ const db = new pg.Client({
   password: "Halloween200!",
   port: 5432,
 });
+
 db.connect(
   console.log("Database 'secrets' connected!")
 );
