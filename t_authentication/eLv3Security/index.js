@@ -62,24 +62,6 @@ async function(request, accessToken, refreshToken, profile, done) {
           console.log("The newUser was registered on database!");
 
         }
-  
-        // try {
-        //   const checkUser = await db.query("SELECT * FROM users WHERE email = $1", [
-        //     profile.email
-        //   ]);
-
-        //   if (checkUser.rows.length > 0) {
-        //     done(null, true);
-        //   } else {
-        //         const result = await db.query(
-        //           "INSERT INTO users (email, password) VALUES ($1, $2) RETURNING *",
-        //           [email, "google"]
-        //         );
-        //         done(null, true);     
-        //   }
-        // } catch (err) {
-        //   console.log(err);
-        // }
   }
 ));
 
