@@ -151,15 +151,19 @@ app.post("/register", async (req, res) => {
 //TODO: Create the post route for submit.
 //Handle the submitted data and add it to the database
 app.post("/submit", async (req, res) => {
-  let inputedSecret = req.body.secret;
-  let userLogged = req.user;
-  console.log("Welcome! You are on postSubmit's block!");
-  console.log("The current user's data is: ", userLogged);
-  console.log("The secret typed is: ", inputedSecret);
-  const updateSecret = await db.query(
+  if(req.isAuthenticated()) {
+    let inputedSecret = req.body.secret;
+    let userLogged = req.user;
+    console.log("Welcome! You are on postSubmit's block!");
+    console.log("The current user's data is: ", userLogged);
+    console.log("The secret typed is: ", inputedSecret);
+    const updateSecret = await db.query(
     "UPDATE users SET secret = $1 WHERE id = $2",
     [inputedSecret, userLogged.id]);
-  res.redirect('/secrets');
+    res.redirect('/secrets');
+  } else {
+    res.redirect('/login');
+  }  
 }); 
 
 passport.use(
