@@ -2,17 +2,6 @@ import './App.css'
 import Card from './Card'
 import emojipedia from './Emojipedia'
 
-function createCard(emojipedia) {  
-  return (
-            <Card 
-              key = {emojipedia.id}
-              emoji = {emojipedia.emoji}
-              name = {emojipedia.name}
-              meaning = {emojipedia.meaning}
-            />
-         )
-}
-
 function App() {
 
   return (
@@ -23,7 +12,7 @@ function App() {
       </h1>
       <dl className="dictionary">
       
-        {emojipedia.map(createCard)}
+        {emojipedia.map(emojipedia => <Card key = {emojipedia.id} emoji = {emojipedia.emoji} name = {emojipedia.name} meaning = {emojipedia.meaning} />)}
 
       </dl>
     </div>
