@@ -1,34 +1,18 @@
 import '../public/App.css'
-import Input from './components/Input';
-import Form from './components/Form';
+import Register from './components/Register';
+import Login from './components/Login';
 
 
-let isLogin = false;
-
-function loginOrNot() {
-  if (isLogin) {
-    return <h1>Hello</h1>
-  } else {
-    return (
-      <Form 
-        type = {
-          <div>
-            <Input input="Username" />
-            <Input input="Password" />
-          </div>
-        }
-        submit = "Login"
-      />    
-    )
-  }
-}
-
+// let isLogin = false;
+let isRegistered = false;
+  
 function App() {
 
   return (
 
     <div className="container">
-      {loginOrNot()}
+      {/* {isLogin ? <h1>Hello</h1> : <Login /> } */}
+      { isRegistered ? <Login /> : <Register />}
     </div>
 
   )
