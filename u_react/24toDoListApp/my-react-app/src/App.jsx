@@ -22,12 +22,13 @@ function App() {
         </div>
         <div className="form">
           <input type="text" name='item' onChange={e => setItem(e.target.value)} value={item}/>
-          <button onClick={() => {
+          <button onClick={(e) => {
             setClickSubmit([
               ...clickSubmit,
               { id: nextId++, item: item }
             ]);
-          }}
+            setItem('')
+            }}
           >Add
           </button>
         </div>
