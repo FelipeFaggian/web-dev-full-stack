@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './App.css'
+import ToDoList from './components/ToDoList';
 
 //CHALLENGE: Make this app work by applying what you've learnt.
 //1. When new text is written into the input, its state should be saved.
@@ -8,11 +9,7 @@ import './App.css'
 //3. The <ul> should display all the array items as <li>s
 
 function App() {
-
-  let nextId = 0;
-
   const [item, setItem] = useState("");
-
   const [clickSubmit, setClickSubmit] = useState([]);
 
   return (
@@ -22,21 +19,21 @@ function App() {
         </div>
         <div className="form">
           <input type="text" name='item' onChange={e => setItem(e.target.value)} value={item}/>
-          <button onClick={(e) => {
-            setClickSubmit([
+          <button onClick={() => {
+              setClickSubmit([
               ...clickSubmit,
-              { id: nextId++, item: item }
-            ]);
-            setItem('')
-            }}
+              { id: (clickSubmit.length), item: item, lineStrike: true }
+          ]);
+          setItem('')}}
           >Add
           </button>
         </div>
         <div>
         <ul>
           {clickSubmit.map(e => (
-            <li key={e.id}>{e.item}</li>
+            <ToDoList key={e.id} id={e.id} item={e.item} lineStrike={e.lineStrike}/>
           ))}
+          
         </ul>
         </div>
     </div>
