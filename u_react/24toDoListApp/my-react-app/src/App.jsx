@@ -33,7 +33,6 @@ function App() {
           {clickSubmit.map(e => (
             <ToDoList key={e.id} id={e.id} item={e.item} lineStrike={e.lineStrike}/>
           ))}
-          
         </ul>
         </div>
     </div>
