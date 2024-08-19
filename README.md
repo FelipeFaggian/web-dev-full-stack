@@ -1,1 +1,1 @@
-NEVER TURN THIS REPOSITORY ON PUBLIC!!
+Trajeto de aprendizado do curso de desenvolvimento WEB Full-Stack. 
